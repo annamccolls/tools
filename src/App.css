@@ -1,0 +1,90 @@
+:root {
+  --forest-green: #2c5e1a;
+  --leaf-green: #4caf50;
+  --bark-brown: #795548;
+  --sunlight-yellow: #ffd54f;
+  --sky-blue: #81d4fa;
+  --forest-floor: #a1887f;
+  --text-color: #212121;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--forest-green);
+  color: var(--text-color);
+}
+
+.App {
+  text-align: center;
+}
+
+nav {
+  background-color: var(--bark-brown);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--sunlight-yellow);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+nav ul li a:hover {
+  color: var(--sky-blue);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sunlight-yellow);
+}
+
+button {
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  border-radius: 10px;
+  border: 1px solid var(--leaf-green);
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--sunlight-yellow);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.25rem 0;
+  }
+}

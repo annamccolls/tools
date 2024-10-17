@@ -1,0 +1,86 @@
+.help-binge-page {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.record-urge-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--leaf-green);
+  color: var(--sunlight-yellow);
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.record-urge-btn:hover {
+  background-color: var(--bark-brown);
+  transform: scale(1.05);
+}
+
+.urge-intensity {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.urge-intensity label {
+  margin-bottom: 0.5rem;
+  color: var(--sunlight-yellow);
+  font-weight: bold;
+}
+
+.urge-intensity input[type="range"] {
+  width: 100%;
+  max-width: 300px;
+}
+
+.helpline-info {
+  margin-top: 2rem;
+  background-color: var(--forest-floor);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.helpline-info h3 {
+  color: var(--sunlight-yellow);
+  margin-bottom: 1rem;
+}
+
+.helpline-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--sunlight-yellow);
+  margin: 1rem 0;
+}
+
+.tools-button {
+  display: block;
+  width: 200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--leaf-green);
+  color: var(--sunlight-yellow);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.tools-button:hover {
+  background-color: var(--bark-brown);
+  color: var(--sunlight-yellow);
+  transform: scale(1.05);
+}

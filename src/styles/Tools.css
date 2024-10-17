@@ -1,0 +1,89 @@
+.tools-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tools-page h2 {
+  color: var(--sunlight-yellow);
+  margin-bottom: 1rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tool-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--leaf-green);
+  color: var(--sunlight-yellow);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tool-button:hover {
+  background-color: var(--bark-brown);
+  color: var(--sunlight-yellow);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tool-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--forest-floor);
+}
+
+.tool-options {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--forest-floor);
+  color: var(--sunlight-yellow);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: var(--bark-brown);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.example-button {
+  background-color: var(--sky-blue);
+  color: var(--forest-green);
+}
+
+.example-button:hover {
+  background-color: var(--sunlight-yellow);
+  color: var(--forest-green);
+}
+
+@media (max-width: 600px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

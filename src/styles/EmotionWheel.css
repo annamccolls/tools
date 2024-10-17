@@ -1,0 +1,101 @@
+.emotion-wheel {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wheel {
+      position: relative;
+      width: 550px;
+      height: 550px;
+      margin: 2rem 0;
+    }
+
+    .inner-wheel, .outer-wheel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .emotion {
+      position: absolute;
+      transform-origin: center;
+      background-color: var(--light-green);
+      color: var(--deep-blue);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 5px;
+      font-weight: bold;
+    }
+
+    .emotion.inner {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-100px) rotate(calc(var(--rotation) * -1));
+      font-size: 1rem;
+    }
+
+    .emotion.outer {
+      width: 90px;
+      height: 75px;
+      border-radius: 35px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-240px) rotate(calc(var(--rotation) * -1));
+      font-size: 0.9rem;
+    }
+
+    .emotion:hover, .emotion.selected {
+      background-color: var(--soft-coral);
+      color: white;
+      z-index: 1;
+    }
+
+    .emotion.inner:hover, .emotion.inner.selected {
+      transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-105px) rotate(calc(var(--rotation) * -1)) scale(1.1);
+    }
+
+    .emotion.outer:hover, .emotion.outer.selected {
+      transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-245px) rotate(calc(var(--rotation) * -1)) scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .wheel {
+        width: 350px;
+        height: 350px;
+      }
+
+      .emotion.inner {
+        width: 60px;
+        height: 60px;
+        transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-70px) rotate(calc(var(--rotation) * -1));
+        font-size: 0.8rem;
+      }
+
+      .emotion.outer {
+        width: 65px;
+        height: 55px;
+        transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-150px) rotate(calc(var(--rotation) * -1));
+        font-size: 0.7rem;
+      }
+
+      .emotion.inner:hover, .emotion.inner.selected {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-75px) rotate(calc(var(--rotation) * -1)) scale(1.1);
+      }
+
+      .emotion.outer:hover, .emotion.outer.selected {
+        transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-155px) rotate(calc(var(--rotation) * -1)) scale(1.1);
+      }
+    }
